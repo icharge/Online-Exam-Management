@@ -1,0 +1,40 @@
+
+// การบันทึกข้อมูลลงฐานข้อมูล
+
+/*
+$db->Table = "user";
+$db->Field = "Name";
+$db->Value = "'test1'";
+$user = $db->Insert();
+if($user){
+echo"บันทึกข้อมูลเสร็จเรียบร้อย";
+}else{
+	echo "บันทึกข้อมูลไม่ได้!";
+}
+*/
+
+// การบแสดงข้อมูลลงฐานข้อมูล
+
+
+	$db->Table = "student";
+	$db->Where = " Stu_id = '54310104' ";
+	$user = $db->Select();
+	echo $user['Stu_name'];
+
+
+// การ update ข้อมูลลงฐานข้อมูล
+
+/*
+$db->Table = "user";
+$db->Set = " name = 'test2' ";
+$db->Where = " id = '1' ";
+$db->Update();
+*/
+
+// การลบข้อมูลลงฐานข้อมูล
+
+/*
+$db->Table = "user";
+$db->Where = " id = '1' ";
+$db->Delete();
+*/

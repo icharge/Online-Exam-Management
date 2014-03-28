@@ -1,0 +1,21 @@
+เลือกข้อสอบทั้งหมดจาก Subject
+SELECT s.sub_id, sub_num, sub_name, sub_teacher, t.top_id, top_name, question
+FROM subject s, topics t, question q
+WHERE q.top_id = t.top_id
+AND s.sub_id = t.sub_id
+AND s.sub_id = 1
+
+เลือกข้อสอบทั้งหมดจาก Topics
+SELECT s.sub_id, sub_num, sub_name, sub_teacher, t.top_id, top_name, question
+FROM subject s, topics t, question q
+WHERE q.top_id = t.top_id
+AND s.sub_id = t.sub_id
+AND t.top_id = 1
+
+เลือกรายการคะแนนผลสอบทั้งหมด
+SELECT st.stu_id, stu_num, stu_name, sub_name, top_name, Score
+FROM student st, subject su, topics t, scoreboard sc
+WHERE sc.sub_id = su.sub_id
+AND sc.top_id = t.top_id
+AND sc.stu_id = st.stu_id
+
