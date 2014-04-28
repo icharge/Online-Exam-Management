@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- Functions
 --
 CREATE FUNCTION `getSubject`(subid VARCHAR(8)) RETURNS varchar(50) CHARSET utf8
-RETURN (Select Sub_name from subject where Sub_id = subid)$$
+RETURN (Select Sub_name from subject where Sub_id = subid);
 
 CREATE FUNCTION `getTopic`(topid INT) RETURNS varchar(50) CHARSET utf8
-RETURN (Select Top_name from topics where Top_id = topid)$$
+RETURN (Select Top_name from topics where Top_id = topid);
 
 
 -- --------------------------------------------------------
